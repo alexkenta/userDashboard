@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin add user</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <h3>Add a new user</h3>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">
+            <a href="/dashboard/admin" class="btn-primary">Dashboard</a>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <form action="/process_registration" method="post">
+                    {% csrf_token %}
+                    <label for="email">Email: </label><br>
+                    <input type="text" name="email"><br>
+                    <label for="first_name">First Name: </label><br>
+                    <input type="text" name="first_name"><br>
+                    <label for="last_name">Last Name: </label><br>
+                    <input type="text" name="last_name"><br>
+                    <label for="password">Password: </label><br>
+                    <input type="password" name="password"><br>
+                    <label for="pwconfirm">Confirm PW: </label><br>
+                    <input type="password" name="pwconfirm"><br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+
+    </div>
+</div>
+</body>
+</html>
